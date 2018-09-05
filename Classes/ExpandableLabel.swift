@@ -28,12 +28,12 @@ import UIKit
 /**
  * The delegate of ExpandableLabel.
  */
-public protocol ExpandableLabelDelegate: NSObjectProtocol {
-    func willExpandLabel(_ label: ExpandableLabel)
-    func didExpandLabel(_ label: ExpandableLabel)
+@objc public protocol ExpandableLabelDelegate: NSObjectProtocol {
+    @objc func willExpandLabel(_ label: ExpandableLabel)
+    @objc func didExpandLabel(_ label: ExpandableLabel)
     
-    func willCollapseLabel(_ label: ExpandableLabel)
-    func didCollapseLabel(_ label: ExpandableLabel)
+    @objc func willCollapseLabel(_ label: ExpandableLabel)
+    @objc func didCollapseLabel(_ label: ExpandableLabel)
 }
 
 /**
@@ -47,7 +47,7 @@ open class ExpandableLabel: UILabel {
     }
     
     /// The delegate of ExpandableLabel
-    weak open var delegate: ExpandableLabelDelegate?
+    @objc weak open var delegate: ExpandableLabelDelegate?
     
     /// Set 'true' if the label should be collapsed or 'false' for expanded.
     @IBInspectable open var collapsed: Bool = true {
