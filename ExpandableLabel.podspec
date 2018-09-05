@@ -11,13 +11,15 @@ Pod::Spec.new do |s|
 		   the entire content.
                    DESC
 
-  s.homepage     = "https://github.com/apploft/ExpandableLabel"
+  s.homepage     = "https://github.com/datkinnguyen/ExpandableLabel"
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   
   s.author       = "Mathias Köhnke"
   
   s.platform     = :ios, "8.0"
+
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
 
   s.source       = { :git => "https://github.com/apploft/ExpandableLabel.git", :tag => s.version.to_s }
 
